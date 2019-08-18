@@ -1,1 +1,10 @@
 ### ReadMe
+
+
+## To Build
+`$ gradle build`
+- If you do not have gradle be sure to `$ brew install gradle`
+
+## To compile and run
+`$ java -jar build/libs/gs-rest-service-0.1.0.jar`
+- This will run your server on port 8080

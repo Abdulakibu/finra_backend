@@ -40,7 +40,7 @@ public class PhoneControllerTests {
     public void noParamPhoneShouldReturnDefaultMessage() throws Exception {
 
         this.mockMvc.perform(get("/phonenumber")).andDo(print()).andExpect(status().isOk())
-                .andExpect(jsonPath("$.content").value("0"));
+                .andExpect(jsonPath("$.result").value("0"));
     }
 
     @Test
@@ -48,7 +48,7 @@ public class PhoneControllerTests {
 
         this.mockMvc.perform(get("/phonenumber").param("number", "1"))
                 .andDo(print()).andExpect(status().isOk())
-                .andExpect(jsonPath("$.content").value("1"));
+                .andExpect(jsonPath("$.result").value("1"));
     }
 
 }
